@@ -69,5 +69,9 @@ def whatsapp_webhook():
         msg.body("Please send a valid link (starting with http or https).")
     return str(resp)
 
+@app.route('/')
+def home():
+    return "WhatsApp Bot is running."
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
